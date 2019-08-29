@@ -66,13 +66,11 @@ function createRock(x) {
      } else {
        function step() {
          rock.style.top = `${top += 2}px`;
-        //  console.log('rock style top', rock.style.top);
+      
          if(top < GAME_HEIGHT){
            window.requestAnimationFrame(moveRock);
-          //  console.log(top);
+
         }else {
-            // let latestRock = document.querySelector('div.rock:first');
-            // console.log(latestRock);
 
             rock.remove();
 
