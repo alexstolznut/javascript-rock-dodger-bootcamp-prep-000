@@ -30,17 +30,29 @@ function checkCollision(rock) {
     const dodgerLeftEdge = positionToInteger(DODGER.style.left)
 
     // FIXME: The DODGER is 40 pixels wide -- how do we get the right edge?
+<<<<<<< HEAD
     const dodgerRightEdge = dodgerLeftEdge + 40;
+=======
+    const dodgerRightEdge = dodgerLeftEdge + parseInt(DODGER.offsetWidth);
+>>>>>>> c25a1c1890a428161f932aaef067e5380b360ca1
 
     const rockLeftEdge = positionToInteger(rock.style.left)
 
     // FIXME: The rock is 20 pixel's wide -- how do we get the right edge?
+<<<<<<< HEAD
     const rockRightEdge = rockLeftEdge + 20;
     // console.log(`rockLeftEdge: ${rockLeftEdge} \n dodgerLeftEdge: ${dodgerLeftEdge}`)
 
     if ((rockLeftEdge <= dodgerLeftEdge && rockRightEdge >= dodgerLeftEdge) ||
         (rockLeftEdge >= dodgerLeftEdge && rockRightEdge <= dodgerRightEdge) ||
         (rockLeftEdge <= dodgerRightEdge && rockRightEdge >= dodgerRightEdge))
+=======
+    const rockRightEdge = rockLeftEdge + parseInt(rock.offsetWidth);
+    // console.log(`rockLeftEdge: ${rockLeftEdge} \n dodgerLeftEdge: ${dodgerLeftEdge}`)
+
+    if (rockLeftEdge > dodgerLeftEdge &&
+    rockRightEdge < dodgerRightEdge)
+>>>>>>> c25a1c1890a428161f932aaef067e5380b360ca1
 
     /**
                * Think about it -- what's happening here?
@@ -104,6 +116,10 @@ function createRock(x) {
      */
      if(checkCollision(rock) === true) {
         // console.log('checkCollision true');
+<<<<<<< HEAD
+=======
+          window.cancelAnimationFrame(window.requestAnimationFrame(moveRock));
+>>>>>>> c25a1c1890a428161f932aaef067e5380b360ca1
         endGame();
         START.style.display = 'block';
 
@@ -121,7 +137,11 @@ function createRock(x) {
         if (top >= 400){
             // let latestRock = document.querySelector('div.rock:first');
             // console.log(latestRock);
+<<<<<<< HEAD
             rock.remove();
+=======
+            removeRock(rock);
+>>>>>>> c25a1c1890a428161f932aaef067e5380b360ca1
 
         }
        }
@@ -166,9 +186,16 @@ function createRock(x) {
  */
 function endGame() {
   clearInterval(gameInterval);
+<<<<<<< HEAD
   ROCKS.forEach(function(rock)
      {rock.remove()
      });
+=======
+  for(let i = 0; i < ROCKS.length; i++){
+    console.log(ROCKS.length)
+    removeRock(ROCKS[i]);
+  }
+>>>>>>> c25a1c1890a428161f932aaef067e5380b360ca1
   ROCKS.length = 0;
 
 }
@@ -177,6 +204,7 @@ function removeRock(rock){
 }
 
 function moveDodger(e) {
+<<<<<<< HEAD
 
   if([LEFT_ARROW, RIGHT_ARROW].indexOf(e.which) > -1){
     e.preventDefault();
@@ -186,6 +214,16 @@ function moveDodger(e) {
     moveDodgerLeft();
   }
   if (e.which === RIGHT_ARROW) {
+=======
+  e.preventDefault();
+  e.stopPropagation();
+  if(e.which !== LEFT_ARROW && e.which !== RIGHT_ARROW) {
+    return;
+  }
+  if(e.which === LEFT_ARROW) {
+    moveDodgerLeft();
+  } else if (e.which === RIGHT_ARROW) {
+>>>>>>> c25a1c1890a428161f932aaef067e5380b360ca1
     moveDodgerRight();
   }
 
