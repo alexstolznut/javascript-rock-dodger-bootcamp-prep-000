@@ -198,12 +198,13 @@ function endGame() {
   ROCKS.length = 0;
 
 }
+
 function removeRock(rock){
   GAME.removeChild(rock);
 }
 
 function moveDodger(e) {
-<<<<<<< HEAD
+
 
   if([LEFT_ARROW, RIGHT_ARROW].indexOf(e.which) > -1){
     e.preventDefault();
@@ -213,19 +214,8 @@ function moveDodger(e) {
     moveDodgerLeft();
   }
   if (e.which === RIGHT_ARROW) {
-=======
-  e.preventDefault();
-  e.stopPropagation();
-  if(e.which !== LEFT_ARROW && e.which !== RIGHT_ARROW) {
-    return;
-  }
-  if(e.which === LEFT_ARROW) {
-    moveDodgerLeft();
-  } else if (e.which === RIGHT_ARROW) {
->>>>>>> c25a1c1890a428161f932aaef067e5380b360ca1
     moveDodgerRight();
   }
-
   // implement me!
   /**
    * This function should call `moveDodgerLeft()`
