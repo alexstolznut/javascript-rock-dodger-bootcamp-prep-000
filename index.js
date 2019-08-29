@@ -50,7 +50,7 @@ function checkCollision(rock) {
 
     // console.log(`rockLeftEdge: ${rockLeftEdge} \n dodgerLeftEdge: ${dodgerLeftEdge}`)
 
-    
+
 
 
     /**
