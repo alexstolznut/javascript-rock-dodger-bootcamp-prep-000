@@ -188,7 +188,7 @@ function endGame() {
   //    {rock.remove();
   //    });
   for(let i = 0; i < ROCKS.length; i++){
-      GAME.removeChild(ROCKS[i].getAttribute('class'));
+      GAME.removeChild(document.querySelector('.rocks'));
   }
 
   ROCKS.length = 0;
