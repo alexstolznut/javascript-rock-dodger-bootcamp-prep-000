@@ -184,12 +184,12 @@ function createRock(x) {
 function endGame() {
   clearInterval(gameInterval);
 
-  // ROCKS.forEach(function(rock)
-  //    {rock.remove();
-  //    });
-  for(let i = 0; i < ROCKS.length; i++){
-      GAME.removeChild(document.querySelector('.rock'));
-  }
+  ROCKS.forEach(function(rock)
+     {rock.remove();
+     });
+  // for(let i = 0; i < ROCKS.length; i++){
+  //     GAME.removeChild(document.querySelector('.rock'));
+  // }
 
   ROCKS.length = 0;
 
