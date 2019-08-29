@@ -187,7 +187,7 @@ function endGame() {
   // ROCKS.forEach(function(rock)
   //    {rock.remove();
   //    });
-  for(let = 0; i < ROCKS.length; i++){
+  for(let i = 0; i < ROCKS.length; i++){
     GAME.removeChild(ROCKS[i]);
   }
 
