@@ -116,7 +116,6 @@ function createRock(x) {
      if(checkCollision(rock) === true) {
         // console.log('checkCollision true');
 
-          window.cancelAnimationFrame(window.requestAnimationFrame(moveRock));
 
         endGame();
         START.style.display = 'block';
