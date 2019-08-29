@@ -33,7 +33,7 @@ function checkCollision(rock) {
 
     const dodgerRightEdge = dodgerLeftEdge + 40;
 
-    const dodgerRightEdge = dodgerLeftEdge + parseInt(DODGER.offsetWidth);
+
 
 
     const rockLeftEdge = positionToInteger(rock.style.left)
